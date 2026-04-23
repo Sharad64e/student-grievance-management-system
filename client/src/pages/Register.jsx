@@ -1,6 +1,5 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { GraduationCap } from 'lucide-react';
 import { useAuth } from '../context/AuthContext.jsx';
 
 const Register = () => {
@@ -33,7 +32,7 @@ const Register = () => {
     <main className="auth-page">
       <section className="auth-panel">
         <div className="brand-mark">
-          <GraduationCap size={34} />
+          SG
         </div>
         <h1>Create Student Account</h1>
         <p>Register to submit and track your college grievances.</p>

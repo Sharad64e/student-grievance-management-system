@@ -1,6 +1,5 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { LogIn } from 'lucide-react';
 import { useAuth } from '../context/AuthContext.jsx';
 
 const Login = () => {
@@ -33,7 +32,7 @@ const Login = () => {
     <main className="auth-page">
       <section className="auth-panel">
         <div className="brand-mark">
-          <LogIn size={31} />
+          SG
         </div>
         <h1>Student Login</h1>
         <p>Login to manage your submitted grievances.</p>

@@ -1,11 +1,19 @@
-import { createContext, useContext, useMemo, useState } from 'react';
+import React, { createContext, useContext, useMemo, useState } from 'react';
 import api from '../api/axios.js';
 
 const AuthContext = createContext(null);
 
 const storedUser = () => {
   const value = localStorage.getItem('user');
-  return value ? JSON.parse(value) : null;
+  if (!value) return null;
+
+  try {
+    return JSON.parse(value);
+  } catch {
+    localStorage.removeItem('user');
+    localStorage.removeItem('token');
+    return null;
+  }
 };
 
 export const AuthProvider = ({ children }) => {
